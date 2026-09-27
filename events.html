@@ -137,7 +137,7 @@
         <p class="eyebrow text-sm reveal">Upcoming</p>
         <h2 class="font-display text-2xl font-semibold text-navy mt-2 mb-8 reveal">What's Next</h2>
 
-        <div class="grid lg:grid-cols-3 gap-6">
+        <div class="grid lg:grid-cols-3 gap-6" id="upcoming-events-loop">
           <article class="card overflow-hidden reveal">
             <div class="h-40 bg-navy/90 flex items-center justify-center">
               <span class="text-white/70 text-xs">Event Poster Placeholder</span>
@@ -201,7 +201,7 @@
       <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
         <p class="eyebrow text-sm reveal">Past</p>
         <h2 class="font-display text-2xl font-semibold text-navy mt-2 mb-8 reveal">Previous Events</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="past-events-loop">
           <div class="card p-5 reveal opacity-90">
             <p class="text-xs text-ink-soft">12 Jun 2026</p>
             <h4 class="font-display font-semibold text-navy text-sm mt-2">Writing Better MCQs</h4>
@@ -306,4 +306,5 @@
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/content-render.js"></script>
 </body></html>

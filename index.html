@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home · HPERD — Faisalabad Medical University</title>
+  <meta name="description" content="HPERD at Faisalabad Medical University — advancing health professions education, faculty development, and research.">
+  <link rel="icon" type="image/jpeg" href="assets/images/hperd-logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0F2D52',
+            'navy-deep': '#0A1F3A',
+            teal: '#0F766E',
+            gold: '#D4A017',
+            mist: '#F2F4F6',
+            paper: '#FBFAF8',
+            ink: '#1A2733',
+            'ink-soft': '#4B5B68',
+          },
+          fontFamily: {
+            display: ['Poppins', 'Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-body bg-paper text-ink antialiased">
+ 
+
+<!-- Universal Header -->
+<div class="header-slot">
+
+  <header id="siteHeader" class="site-header max-w-7xl mx-auto">
+
+    <div class="px-4 sm:px-6 lg:px-8">
+
+      <div class="flex items-center justify-between h-16 sm:h-[68px]">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+
+          <div class="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0">
+
+            <span class="beacon-glow"></span>
+
+            <img
+              src="assets/images/hperd-logo.jpg"
+              alt="HPERD crest — lighthouse since 2008"
+              class="logo-mark logo-float w-full h-full object-contain"
+            >
+
+          </div>
+
+          <div class="leading-tight">
+
+            <p class="font-display font-semibold text-navy text-[15px] sm:text-base">
+              HPERD
+            </p>
+
+            <p class="text-[11px] text-ink-soft hidden sm:block">
+              Faisalabad Medical University
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden lg:flex items-center gap-7"
+          aria-label="Primary"
+        >
+
+          <a href="index.html" class="nav-link text-sm">
+            Home
+          </a>
+
+          <a href="about.html" class="nav-link text-sm">
+            About
+          </a>
+
+          <a href="faculty.html" class="nav-link text-sm">
+            Faculty
+          </a>
+
+          <a href="programs.html" class="nav-link text-sm">
+            Programs
+          </a>
+
+          <a href="events.html" class="nav-link text-sm">
+            Events
+          </a>
+
+          <a href="announcements.html" class="nav-link text-sm">
+            Announcements
+          </a>
+
+          <a href="gallery.html" class="nav-link text-sm">
+            Gallery
+          </a>
+
+          <a href="downloads.html" class="nav-link text-sm">
+            Downloads
+          </a>
+
+          <a href="contact.html" class="nav-link text-sm">
+            Contact
+          </a>
+
+        </nav>
+
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+
+          <!-- Search -->
+          <button
+            aria-label="Search HPERD site"
+            class="hidden sm:flex w-9 h-9 rounded-full items-center justify-center text-ink-soft hover:text-navy hover:bg-mist transition"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+
+          </button>
+
+
+          <!-- Login -->
+          <a
+            href="#"
+            class="hidden sm:inline-flex items-center rounded-full border border-navy/20 text-navy text-sm font-medium px-4 py-2 hover:bg-navy hover:text-white transition"
+          >
+            Login
+          </a>
+
+
+          <!-- Mobile Menu -->
+          <button
+            id="menuBtn"
+            aria-label="Open menu"
+            class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-navy hover:bg-mist transition"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+</div>
+
+
+<!-- Mobile Drawer Overlay -->
+<div
+  id="drawerOverlay"
+  class="fixed inset-0 bg-navy-deep/50 z-[60] opacity-0 pointer-events-none transition-opacity lg:hidden"
+></div>
+
+
+<!-- Mobile Drawer -->
+<aside
+  id="mobileDrawer"
+  class="fixed top-0 right-0 h-full w-[78%] max-w-xs bg-white z-[70] translate-x-full transition-transform duration-300 ease-out lg:hidden shadow-2xl"
+>
+
+  <!-- Drawer Header -->
+  <div class="flex items-center justify-between px-5 h-20 border-b border-navy/10">
+
+    <span class="font-display font-semibold text-navy">
+      Menu
+    </span>
+
+    <button
+      id="closeDrawer"
+      aria-label="Close menu"
+      class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-mist"
+    >
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+        <line x1="6" y1="18" x2="18" y2="6"></line>
+      </svg>
+
+    </button>
+
+  </div>
+
+
+  <!-- Mobile Navigation -->
+  <nav
+    class="flex flex-col px-5 py-4"
+    aria-label="Mobile"
+  >
+
+    <a href="index.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Home
+    </a>
+
+    <a href="about.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      About
+    </a>
+
+    <a href="faculty.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Faculty
+    </a>
+
+    <a href="programs.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Programs
+    </a>
+
+    <a href="events.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Events
+    </a>
+
+    <a href="announcements.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Announcements
+    </a>
+
+    <a href="gallery.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Gallery
+    </a>
+
+    <a href="downloads.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Downloads
+    </a>
+
+    <a href="contact.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">
+      Contact
+    </a>
+
+    <a
+      href="#"
+      class="mt-4 inline-flex justify-center rounded-full bg-navy text-white text-sm font-medium px-4 py-2.5"
+    >
+      Login
+    </a>
+
+  </nav>
+
+</aside>
+
+
+  <main>
+
+    
+    <!-- ===== HPERD Introduction ===== -->
+<section class="relative overflow-hidden bg-navy">
+
+ <!-- Background Image -->
+<div class="absolute inset-0 overflow-hidden">
+
+  <img
+    src="assets/images/fmu.jpg"
+    alt=""
+    aria-hidden="true"
+    class="hero-fmu-bg w-full h-full object-cover"
+  >
+
+  <!-- Stronger blur toward the bottom -->
+  <div class="absolute inset-x-0 bottom-0 h-[55%]
+              bg-gradient-to-t
+              from-navy via-navy/70 to-transparent">
+  </div>
+
+  <!-- Overall soft tint -->
+  <div class="absolute inset-0 bg-navy/25"></div>
+
+</div>
+
+<!-- Elegant Overlay -->
+<div class="absolute inset-0 bg-gradient-to-r
+            from-navy/95 via-navy/85 to-navy/60">
+</div>
+
+
+  <!-- Soft decorative glow -->
+  <div class="absolute -top-32 -right-32 w-96 h-96
+              rounded-full bg-teal/20 blur-3xl">
+  </div>
+
+  <div class="absolute -bottom-40 -left-20 w-96 h-96
+              rounded-full bg-gold/10 blur-3xl">
+  </div>
+
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8
+              py-20 lg:py-28 relative z-10">
+
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16
+                items-center">
+
+
+      <!-- Department Identity -->
+      <div class="lg:col-span-7 reveal">
+
+        <p class="eyebrow text-gold text-sm mb-4">
+          Faisalabad Medical University
+        </p>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl
+                   font-semibold text-white leading-[1.08]">
+
+          Health Professions Education
+          <span class="text-gold">&amp; Research Department</span>
+
+        </h1>
+
+        <p class="mt-3 text-xl lg:text-2xl
+                  font-display text-white/80 font-medium">
+          HPERD
+        </p>
+
+        <div class="w-16 h-1 bg-gold rounded-full my-7"></div>
+
+
+        <p class="text-white/80 text-lg leading-relaxed max-w-2xl">
+          The Health Professions Education &amp; Research Department (HPERD)
+          at Faisalabad Medical University (FMU) is dedicated to strengthening
+          health professions education, promoting faculty development, and
+          advancing research in medical and health sciences education.
+        </p>
+
+        <p class="mt-5 text-white/65 leading-relaxed max-w-2xl">
+          Through faculty development, educational innovation, research,
+          assessment, mentorship, and continuing professional development,
+          HPERD supports educators and learners in building a culture of
+          excellence, scholarship, and lifelong learning across FMU.
+        </p>
+
+
+        <div class="mt-8 flex flex-wrap gap-4">
+
+          <a
+            href="about.html"
+            class="btn-primary rounded-full px-7 py-3.5 text-sm"
+          >
+            About HPERD
+          </a>
+
+          <a
+            href="programs.html"
+            class="inline-flex items-center rounded-full
+                   border border-white/30 text-white
+                   px-7 py-3.5 text-sm font-medium
+                   hover:bg-white hover:text-navy transition"
+          >
+            Explore Programs
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Department Highlight Card -->
+      <div class="lg:col-span-5 reveal">
+
+        <div class="relative">
+
+          <!-- Card glow -->
+          <div class="absolute -inset-4 rounded-[2rem]
+                      bg-gold/10 blur-xl">
+          </div>
+
+
+          <div class="relative bg-white/95 backdrop-blur-md
+                      rounded-[1.75rem] shadow-2xl
+                      border border-white/40
+                      p-8 lg:p-10">
+
+
+            <!-- Logo -->
+            <div class="w-16 h-16 rounded-2xl bg-navy
+                        flex items-center justify-center
+                        mb-6 shadow-lg">
+
+              <img
+                src="assets/images/hperd-logo.jpg"
+                alt="HPERD logo"
+                class="w-12 h-12 object-contain rounded-xl"
+              >
+
+            </div>
+
+
+            <p class="text-xs uppercase tracking-[0.18em]
+                      text-teal font-semibold">
+              About the Department
+            </p>
+
+
+            <h2 class="font-display text-2xl lg:text-3xl
+                       font-semibold text-navy mt-3 leading-tight">
+              Building better educators, researchers
+              and healthcare professionals.
+            </h2>
+
+
+            <p class="text-sm text-ink-soft leading-relaxed mt-4">
+              HPERD provides an academic platform for professional
+              development, educational research, curriculum enhancement,
+              assessment, mentorship, and innovation within health
+              professions education.
+            </p>
+
+
+            <div class="mt-7 pt-6 border-t border-navy/10">
+
+              <div class="flex items-center gap-3">
+
+                <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+
+                <span class="text-sm text-ink-soft">
+                  Faisalabad Medical University
+                </span>
+
+              </div>
+
+
+              <div class="flex items-center gap-3 mt-3">
+
+                <span class="w-2.5 h-2.5 rounded-full bg-teal"></span>
+
+                <span class="text-sm text-ink-soft">
+                  Health Professions Education &amp; Research
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Bottom curved transition -->
+  <div
+    class="absolute bottom-0 left-0 w-full overflow-hidden
+           leading-none pointer-events-none"
+    style="height: 42px;"
+  >
+
+    <svg
+      class="w-full h-full"
+      viewBox="0 0 1440 80"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <path
+        d="M0,45 C240,80 480,10 720,40
+           C960,70 1200,15 1440,42
+           L1440,80 L0,80 Z"
+        fill="#FBFAF8"
+      />
+
+    </svg>
+
+  </div>
+
+</section>
+
+<!-- ===== Mission & Vision ===== -->
+<section class="bg-mist relative overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+
+    <div class="text-center max-w-3xl mx-auto reveal">
+
+      <p class="eyebrow text-sm">
+        Our Purpose
+      </p>
+
+      <h2 class="font-display text-3xl lg:text-4xl
+                 font-semibold text-navy mt-2">
+        Mission &amp; Vision
+      </h2>
+
+      <div class="divider-gold mx-auto my-5"></div>
+
+      <p class="text-ink-soft leading-relaxed">
+        HPERD is committed to creating an academic environment where
+        educators and learners can continuously improve, innovate,
+        collaborate, and contribute to better health professions education.
+      </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+
+      <!-- Mission -->
+      <div class="bg-white rounded-2xl p-8 lg:p-10
+                  border border-navy/5 shadow-sm reveal">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <div class="w-12 h-12 rounded-xl bg-navy
+                      flex items-center justify-center text-gold">
+
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21a9 9 0 100-18 9 9 0 000 18z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 7v5l3 2"
+              />
+            </svg>
+
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em]
+                      text-teal font-semibold">
+              Our Mission
+            </p>
+
+            <h3 class="font-display text-2xl
+                       font-semibold text-navy mt-1">
+              Mission
+            </h3>
+          </div>
+
+        </div>
+
+        <p class="text-ink-soft leading-relaxed">
+          To strengthen the quality of health professions education at
+          Faisalabad Medical University by developing educators, promoting
+          evidence-based teaching and assessment practices, supporting
+          educational research, and fostering innovation and collaboration
+          across the health sciences.
+        </p>
+
+      </div>
+
+
+      <!-- Vision -->
+      <div class="bg-navy rounded-2xl p-8 lg:p-10
+                  shadow-sm reveal">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <div class="w-12 h-12 rounded-xl bg-gold/15
+                      flex items-center justify-center text-gold">
+
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"
+              />
+              <circle cx="12" cy="12" r="2.5" />
+            </svg>
+
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em]
+                      text-gold font-semibold">
+              Our Vision
+            </p>
+
+            <h3 class="font-display text-2xl
+                       font-semibold text-white mt-1">
+              Vision
+            </h3>
+          </div>
+
+        </div>
+
+        <p class="text-white/70 leading-relaxed">
+          To be a leading centre for health professions education and
+          educational research, recognized for excellence in faculty
+          development, innovative teaching, meaningful scholarship, and
+          continuous improvement in healthcare education.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===== Vice Chancellor's Message ===== -->
+<section class="relative overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+
+    <div class="text-center mb-12 reveal">
+
+      <p class="eyebrow text-sm">
+        Leadership
+      </p>
+
+      <h2 class="font-display text-3xl lg:text-4xl
+                 font-semibold text-navy mt-2">
+        Message from the Vice Chancellor
+      </h2>
+
+      <div class="divider-gold mx-auto my-5"></div>
+
+    </div>
+
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center reveal">
+
+      <div class="lg:col-span-4">
+
+        <div class="relative">
+
+          <div class="absolute -inset-3 rounded-[1.75rem]
+                      bg-gradient-to-br from-gold/25 via-teal/10
+                      to-transparent -z-10">
+          </div>
+
+          <img
+            class="rounded-2xl w-full h-80 lg:h-96
+                   object-cover lazy-fade shadow-lift"
+            loading="lazy"
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
+            alt="Portrait of the Vice Chancellor"
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="lg:col-span-8">
+
+        <p class="eyebrow text-sm">
+          Vice Chancellor's Message
+        </p>
+
+        <div class="divider-gold my-4"></div>
+
+        <blockquote class="font-display text-2xl lg:text-[1.8rem]
+                            text-navy leading-snug">
+          "Faisalabad Medical University is committed to nurturing an
+          academic culture in which excellence in teaching, learning,
+          research, and professional development remains a shared
+          responsibility. The Health Professions Education &amp; Research
+          Department provides an important platform for strengthening this
+          culture across the University."
+        </blockquote>
+
+        <p class="text-ink-soft leading-relaxed mt-6 max-w-3xl">
+          Through HPERD, our faculty have opportunities to enhance their
+          teaching skills, engage in educational scholarship, and adopt
+          contemporary approaches to curriculum development, assessment,
+          and learner support.
+        </p>
+
+        <div class="mt-7 flex items-center gap-4">
+
+          <div class="w-12 h-0.5 bg-gold"></div>
+
+          <div>
+            <p class="font-display font-semibold text-navy">
+              Prof. Dr. Tariq Mehmood
+            </p>
+
+            <p class="text-ink-soft text-sm">
+              Vice Chancellor, Faisalabad Medical University
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===== In-Charge HPERD Message ===== -->
+<section class="bg-mist relative overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+
+    <div class="text-center mb-12 reveal">
+
+      <p class="eyebrow text-sm">
+        Department Leadership
+      </p>
+
+      <h2 class="font-display text-3xl lg:text-4xl
+                 font-semibold text-navy mt-2">
+        Message from the In-Charge, HPERD
+      </h2>
+
+      <div class="divider-gold mx-auto my-5"></div>
+
+    </div>
+
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14
+                items-center reveal">
+
+      <div class="lg:col-span-8 lg:order-1 order-2">
+
+        <p class="eyebrow text-sm">
+          In-Charge's Message
+        </p>
+
+        <div class="divider-gold my-4"></div>
+
+        <blockquote class="font-display text-2xl lg:text-[1.8rem]
+                            text-navy leading-snug">
+          "At HPERD, we believe that effective health professions education
+          is built through continuous learning, thoughtful reflection,
+          collaboration, and evidence-informed practice."
+        </blockquote>
+
+        <p class="text-ink-soft leading-relaxed mt-6 max-w-3xl">
+          Our aim is to provide faculty and learners with meaningful
+          opportunities to develop their educational skills, explore new
+          approaches to teaching and assessment, and contribute to research
+          that addresses real challenges in health professions education.
+          We look forward to working with colleagues across Faisalabad
+          Medical University to create a stronger and more innovative
+          educational environment.
+        </p>
+
+        <div class="mt-7 flex items-center gap-4">
+
+          <div class="w-12 h-0.5 bg-teal"></div>
+
+          <div>
+            <p class="font-display font-semibold text-navy">
+              Dr. Ayesha Malik
+            </p>
+
+            <p class="text-ink-soft text-sm">
+              In-Charge, Health Professions Education &amp; Research Department
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="lg:col-span-4 lg:order-2 order-1">
+
+        <div class="relative">
+
+          <div class="absolute -inset-3 rounded-[1.75rem]
+                      bg-gradient-to-bl from-teal/20 via-gold/10
+                      to-transparent -z-10">
+          </div>
+
+          <img
+            class="rounded-2xl w-full h-80 lg:h-96
+                   object-cover lazy-fade shadow-lift"
+            loading="lazy"
+            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop"
+            alt="Portrait of the In-Charge, HPERD"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- ===== Latest Announcements ===== -->
+    <section class="bg-mist">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20">
+        <div class="flex items-end justify-between mb-10 reveal">
+          <div>
+            <p class="eyebrow text-sm">Stay Informed</p>
+            <h2 class="font-display text-2xl lg:text-3xl font-semibold text-navy mt-2">Latest Announcements</h2>
+          </div>
+          <a href="announcements.html" class="hidden sm:inline text-teal text-sm font-medium hover:text-navy transition">View all</a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="announcement-loop">
+          <!-- foreach ($announcements as $item): reusable card -->
+          <article class="card overflow-hidden reveal">
+            <img class="w-full h-44 object-cover lazy-fade" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Faculty development session in progress" loading="lazy">
+            <div class="p-5">
+              <p class="text-xs text-teal font-medium">18 September 2026</p>
+              <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Applications open: Faculty Development Certificate — Winter Cohort</h3>
+              <p class="text-sm text-ink-soft mt-2 leading-relaxed">A six-week structured program covering curriculum design, assessment, and feedback for FMU faculty.</p>
+              <a href="announcements.html" class="inline-flex items-center gap-1.5 text-sm text-navy font-medium mt-4 hover:text-teal transition">Read more</a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden reveal">
+            <img class="w-full h-44 object-cover lazy-fade" src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=900&auto=format&fit=crop" alt="Researchers reviewing data together" loading="lazy">
+            <div class="p-5">
+              <p class="text-xs text-teal font-medium">10 September 2026</p>
+              <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Call for abstracts: Annual Medical Education Research Day</h3>
+              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Submit original research and case studies for peer review ahead of the December symposium.</p>
+              <a href="announcements.html" class="inline-flex items-center gap-1.5 text-sm text-navy font-medium mt-4 hover:text-teal transition">Read more</a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden reveal">
+            <img class="w-full h-44 object-cover lazy-fade" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=900&auto=format&fit=crop" alt="Medical students in a workshop" loading="lazy">
+            <div class="p-5">
+              <p class="text-xs text-teal font-medium">2 September 2026</p>
+              <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Revised OSCE assessment guidelines now available</h3>
+              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Department heads are asked to review the updated rubric before the next examination cycle.</p>
+              <a href="announcements.html" class="inline-flex items-center gap-1.5 text-sm text-navy font-medium mt-4 hover:text-teal transition">Read more</a>
+            </div>
+          </article>
+          <!-- endforeach -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Quick Stats (animated) ===== -->
+    <section class="bg-navy relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06]" style="background-image:radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 28px 28px;"></div>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 relative">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div class="reveal text-center border-r border-white/10 last:border-r-0 lg:last:border-r-0">
+            <p class="stat-number counter text-4xl lg:text-5xl text-gold" data-target="64" data-suffix="+">0</p>
+            <p class="text-white/60 text-sm mt-2">Faculty Members</p>
+          </div>
+          <div class="reveal text-center lg:border-r border-white/10 last:border-r-0">
+            <p class="stat-number counter text-4xl lg:text-5xl text-gold" data-target="38" data-suffix="">0</p>
+            <p class="text-white/60 text-sm mt-2">Research Projects</p>
+          </div>
+          <div class="reveal text-center border-r border-white/10 last:border-r-0 lg:last:border-r-0">
+            <p class="stat-number counter text-4xl lg:text-5xl text-gold" data-target="120" data-suffix="+">0</p>
+            <p class="text-white/60 text-sm mt-2">Workshops Delivered</p>
+          </div>
+          <div class="reveal text-center">
+            <p class="stat-number counter text-4xl lg:text-5xl text-gold" data-target="75" data-suffix="">0</p>
+            <p class="text-white/60 text-sm mt-2">Publications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Upcoming Events ===== -->
+    <section>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20">
+        <div class="mb-10 reveal">
+          <p class="eyebrow text-sm">Calendar</p>
+          <h2 class="font-display text-2xl lg:text-3xl font-semibold text-navy mt-2">Upcoming Events</h2>
+        </div>
+
+        <div class="relative pl-8">
+          <div class="timeline-line absolute left-[7px] top-2 bottom-2 w-0.5"></div>
+
+          <div id="events-timeline-items">
+          <div class="relative pb-10 reveal">
+            <span class="timeline-dot absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full"></span>
+            <div class="card p-6 flex flex-col sm:flex-row sm:items-center gap-5">
+              <div class="sm:w-28 shrink-0">
+                <p class="text-3xl font-display font-semibold text-navy">14</p>
+                <p class="text-sm text-ink-soft">Oct 2026</p>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-semibold text-navy">Faculty Development Workshop: Effective Feedback in Clinical Teaching</h3>
+                <p class="text-sm text-ink-soft mt-1">HPERD Seminar Hall, FMU Main Campus</p>
+              </div>
+              <a href="events.html" class="btn-teal rounded-full px-5 py-2.5 text-sm shrink-0 text-center">Register</a>
+            </div>
+          </div>
+
+          <div class="relative pb-10 reveal">
+            <span class="timeline-dot absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full"></span>
+            <div class="card p-6 flex flex-col sm:flex-row sm:items-center gap-5">
+              <div class="sm:w-28 shrink-0">
+                <p class="text-3xl font-display font-semibold text-navy">02</p>
+                <p class="text-sm text-ink-soft">Nov 2026</p>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-semibold text-navy">CME Series: Evidence-Based Medicine for Educators</h3>
+                <p class="text-sm text-ink-soft mt-1">Auditorium B, FMU</p>
+              </div>
+              <a href="events.html" class="btn-teal rounded-full px-5 py-2.5 text-sm shrink-0 text-center">Register</a>
+            </div>
+          </div>
+
+          <div class="relative reveal">
+            <span class="timeline-dot absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full"></span>
+            <div class="card p-6 flex flex-col sm:flex-row sm:items-center gap-5">
+              <div class="sm:w-28 shrink-0">
+                <p class="text-3xl font-display font-semibold text-navy">18</p>
+                <p class="text-sm text-ink-soft">Dec 2026</p>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-semibold text-navy">Annual Medical Education Research Day</h3>
+                <p class="text-sm text-ink-soft mt-1">FMU Convention Centre</p>
+              </div>
+              <a href="events.html" class="btn-teal rounded-full px-5 py-2.5 text-sm shrink-0 text-center">Register</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Recent Notices ===== -->
+    <section class="bg-mist">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+        <div class="flex items-end justify-between mb-8 reveal">
+          <div>
+            <p class="eyebrow text-sm">Bulletin</p>
+            <h2 class="font-display text-2xl lg:text-3xl font-semibold text-navy mt-2">Recent Notices</h2>
+          </div>
+          <a href="downloads.html" class="hidden sm:inline text-teal text-sm font-medium hover:text-navy transition">View all</a>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4" id="notices-loop">
+          <div class="card p-5 flex items-center justify-between gap-4 reveal">
+            <div>
+              <p class="text-xs text-ink-soft">20 September 2026</p>
+              <h4 class="font-display font-semibold text-navy text-sm mt-1">Revised timetable for the Winter Faculty Development Cohort</h4>
+            </div>
+            <a href="downloads.html" class="shrink-0 rounded-full border border-navy/20 text-navy text-xs font-medium px-3 py-1.5 hover:bg-navy hover:text-white transition">View</a>
+          </div>
+          <div class="card p-5 flex items-center justify-between gap-4 reveal">
+            <div>
+              <p class="text-xs text-ink-soft">12 September 2026</p>
+              <h4 class="font-display font-semibold text-navy text-sm mt-1">Venue change: CME Series moved to Auditorium B</h4>
+            </div>
+            <a href="downloads.html" class="shrink-0 rounded-full border border-navy/20 text-navy text-xs font-medium px-3 py-1.5 hover:bg-navy hover:text-white transition">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Programs ===== -->
+    <section class="bg-navy">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20">
+        <div class="mb-10 reveal">
+          <p class="text-gold text-sm font-medium">Capacity Building</p>
+          <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white mt-2">Featured Programs</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="reveal bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+            <div class="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center text-gold mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25L6 9.5v5l6 3.25 6-3.25v-5L12 6.25z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25V2.5"/></svg>
+            </div>
+            <h3 class="text-white font-display font-semibold">Workshops</h3>
+            <p class="text-white/55 text-sm mt-2 leading-relaxed">Short, hands-on sessions on teaching and assessment methods.</p>
+          </div>
+          <div class="reveal bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+            <div class="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center text-gold mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M5 6h14a1 1 0 011 1v13l-3-2-3 2-3-2-3 2-3-2-3 2V7a1 1 0 011-1z"/></svg>
+            </div>
+            <h3 class="text-white font-display font-semibold">CME</h3>
+            <p class="text-white/55 text-sm mt-2 leading-relaxed">Accredited continuing medical education for practising clinicians.</p>
+          </div>
+          <div class="reveal bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+            <div class="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center text-gold mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-1a4 4 0 00-4-4M9 20H4v-1a4 4 0 014-4m9-6a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            </div>
+            <h3 class="text-white font-display font-semibold">Faculty Development</h3>
+            <p class="text-white/55 text-sm mt-2 leading-relaxed">Structured, credit-bearing tracks for long-term teaching growth.</p>
+          </div>
+          <div class="reveal bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+            <div class="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center text-gold mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M4 8h16M5 8h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V9a1 1 0 011-1z"/></svg>
+            </div>
+            <h3 class="text-white font-display font-semibold">Research Training</h3>
+            <p class="text-white/55 text-sm mt-2 leading-relaxed">Mentored pathways from proposal writing to publication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Research Highlights ===== -->
+    <section>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20">
+        <div class="mb-10 reveal">
+          <p class="eyebrow text-sm">Scholarship</p>
+          <h2 class="font-display text-2xl lg:text-3xl font-semibold text-navy mt-2">Research Highlights</h2>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <div class="card p-6 reveal">
+            <p class="text-xs text-ink-soft">Medical Education · 2026</p>
+            <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Impact of Simulation-Based Training on Clinical Confidence Among Final-Year Students</h3>
+            <p class="text-sm text-ink-soft mt-3 leading-relaxed">A mixed-methods study across three FMU-affiliated teaching hospitals.</p>
+          </div>
+          <div class="card p-6 reveal">
+            <p class="text-xs text-ink-soft">Assessment · 2026</p>
+            <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Reliability of Structured Oral Examinations in Undergraduate Surgery</h3>
+            <p class="text-sm text-ink-soft mt-3 leading-relaxed">Inter-rater reliability findings from a two-year cohort review.</p>
+          </div>
+          <div class="card p-6 reveal">
+            <p class="text-xs text-ink-soft">Faculty Development · 2025</p>
+            <h3 class="font-display font-semibold text-navy mt-2 leading-snug">Mentorship Structures and Early-Career Teaching Retention</h3>
+            <p class="text-sm text-ink-soft mt-3 leading-relaxed">Findings from FMU's first structured junior-faculty mentorship pilot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery Preview ===== -->
+    <section class="bg-mist">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20">
+        <div class="flex items-end justify-between mb-10 reveal">
+          <div>
+            <p class="eyebrow text-sm">Moments</p>
+            <h2 class="font-display text-2xl lg:text-3xl font-semibold text-navy mt-2">Gallery Preview</h2>
+          </div>
+          <a href="gallery.html" class="hidden sm:inline text-teal text-sm font-medium hover:text-navy transition">View gallery</a>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <img class="reveal rounded-xl h-40 lg:h-48 w-full object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1607988795691-3d0147b43231?q=80&w=700&auto=format&fit=crop" alt="Faculty workshop discussion">
+          <img class="reveal rounded-xl h-40 lg:h-48 w-full object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=700&auto=format&fit=crop" alt="Students in a lecture hall">
+          <img class="reveal rounded-xl h-40 lg:h-48 w-full object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=700&auto=format&fit=crop" alt="Conference presentation">
+          <img class="reveal rounded-xl h-40 lg:h-48 w-full object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=700&auto=format&fit=crop" alt="Graduation ceremony">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact CTA ===== -->
+    <section class="bg-navy">
+      <div class="max-w-5xl mx-auto px-5 lg:px-8 py-16 text-center reveal">
+        <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white">Have a question about our programs?</h2>
+        <p class="text-white/60 mt-3 max-w-xl mx-auto">The HPERD office is available for faculty, students, and partner institutions seeking guidance on training and research.</p>
+        <a href="contact.html" class="btn-primary rounded-full px-7 py-3.5 text-sm inline-block mt-7">Contact the Department</a>
+      </div>
+    </section>
+
+  </main>
+ 
+  
+<div id="footer"></div>
+
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-teal transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+
+<script src="./components.js"></script>
+
+<script src="assets/js/main.js"></script>
+  <script src="assets/js/content-render.js"></script>
+</body></html>

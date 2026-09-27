@@ -3,43 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Announcements · HPERD — Faisalabad Medical University</title>
-  <meta name="description" content="Official announcements and notices from HPERD, Faisalabad Medical University.">
+  <title id="pageTitleTag">Loading… · HPERD — Faisalabad Medical University</title>
+  <meta id="pageDescTag" name="description" content="HPERD at Faisalabad Medical University.">
   <link rel="icon" type="image/jpeg" href="assets/images/hperd-logo.jpg">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (CDN prototype) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: '#0F2D52',
-            'navy-deep': '#0A1F3A',
-            teal: '#0F766E',
-            gold: '#D4A017',
-            mist: '#F2F4F6',
-            paper: '#FBFAF8',
-            ink: '#1A2733',
-            'ink-soft': '#4B5B68',
-          },
-          fontFamily: {
-            display: ['Poppins', 'Inter', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-          },
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: {
+      colors: { navy:'#0F2D52', 'navy-deep':'#0A1F3A', teal:'#0F766E', gold:'#D4A017', mist:'#F2F4F6', paper:'#FBFAF8', ink:'#1A2733', 'ink-soft':'#4B5B68' },
+      fontFamily: { display:['Poppins','Inter','sans-serif'], body:['Inter','sans-serif'] }
+    }}}
   </script>
-
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-body bg-paper text-ink antialiased">
+
   <!-- ===== Universal Header (floating) ===== -->
   <div class="header-slot">
     <header id="siteHeader" class="site-header max-w-7xl mx-auto">
@@ -123,145 +105,11 @@
   <!-- ===== /Universal Header ===== -->
 
   <main>
-    <section class="bg-navy">
-      <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-14">
-        <p class="text-gold text-sm font-medium">Notice Board</p>
-        <h1 class="font-display text-3xl lg:text-4xl font-semibold text-white mt-2">Announcements</h1>
-        <p class="text-white/60 mt-3 max-w-2xl">Official notices from the Health Professions Education &amp; Research Department.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
-
-        <!-- Category filter (static placeholder, backend-ready) -->
-        <div class="flex flex-wrap gap-3 mb-10 reveal">
-          <button class="px-4 py-2 rounded-full text-sm bg-navy text-white">All</button>
-          <button class="px-4 py-2 rounded-full text-sm bg-white border border-navy/15 text-ink-soft hover:bg-mist">Programs</button>
-          <button class="px-4 py-2 rounded-full text-sm bg-white border border-navy/15 text-ink-soft hover:bg-mist">Research</button>
-          <button class="px-4 py-2 rounded-full text-sm bg-white border border-navy/15 text-ink-soft hover:bg-mist">Academic</button>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="announcement-loop">
-          <!-- foreach ($announcements as $item): CMS-ready card structure -->
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Faculty development session">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Programs</span>
-                <span class="text-xs text-ink-soft">18 Sep 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">Applications open: Faculty Development Certificate — Winter Cohort</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">A six-week structured program covering curriculum design, assessment, and feedback for FMU faculty.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=900&auto=format&fit=crop" alt="Researchers reviewing data">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Research</span>
-                <span class="text-xs text-ink-soft">10 Sep 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">Call for abstracts: Annual Medical Education Research Day</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Submit original research and case studies for peer review ahead of the December symposium.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=900&auto=format&fit=crop" alt="Medical students in a workshop">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Academic</span>
-                <span class="text-xs text-ink-soft">2 Sep 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">Revised OSCE assessment guidelines now available</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Department heads are asked to review the updated rubric before the next examination cycle.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1587355760421-b9de3226a046?q=80&w=900&auto=format&fit=crop" alt="Academic council meeting">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Academic</span>
-                <span class="text-xs text-ink-soft">25 Aug 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">Curriculum committee nominations now open</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Constituent colleges may nominate one representative for the 2026–27 curriculum review cycle.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=900&auto=format&fit=crop" alt="CME session in progress">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Programs</span>
-                <span class="text-xs text-ink-soft">14 Aug 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">Registration open: Evidence-Based Medicine CME series</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Four accredited sessions running through November 2026, open to all clinical faculty.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card overflow-hidden reveal">
-            <img class="w-full h-44 object-cover lazy-fade" loading="lazy" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=900&auto=format&fit=crop" alt="Publication and journal review">
-            <div class="p-5">
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] font-medium text-teal bg-teal/10 px-2.5 py-1 rounded-full">Research</span>
-                <span class="text-xs text-ink-soft">5 Aug 2026</span>
-              </div>
-              <h3 class="font-display font-semibold text-navy mt-3 leading-snug">HPERD faculty publish in Pakistan Journal of Medical Education</h3>
-              <p class="text-sm text-ink-soft mt-2 leading-relaxed">Two department studies accepted in the journal's latest issue on assessment reliability.</p>
-              <div class="flex items-center justify-between mt-4">
-                <a href="#" class="text-sm text-navy font-medium hover:text-teal transition">Read more</a>
-                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-ink-soft border border-navy/15 rounded-full px-3 py-1.5 hover:bg-mist">
-                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-                  PDF
-                </a>
-              </div>
-            </div>
-          </article>
-          <!-- endforeach -->
-        </div>
-      </div>
+    <section id="postContent" class="max-w-4xl mx-auto px-5 lg:px-8 py-16">
+      <p class="text-ink-soft text-sm">Loading…</p>
     </section>
   </main>
+
   <!-- ===== Universal Footer ===== -->
   <footer class="bg-navy-deep text-white/80">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
@@ -345,6 +193,91 @@
   </button>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/content-render.js"></script>
-</body></html>
+  <script>
+
+    function esc(s) { const d = document.createElement('div'); d.textContent = s ?? ''; return d.innerHTML; }
+    function fmtDate(s) { if (!s) return ''; return new Date(s).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' }); }
+
+    async function loadPost() {
+      const slug = new URLSearchParams(window.location.search).get('slug');
+      const container = document.getElementById('postContent');
+      if (!slug) { container.innerHTML = '<p class="text-ink-soft">No post specified.</p>'; return; }
+
+      try {
+        const res = await fetch(`api/posts/single.php?slug=${encodeURIComponent(slug)}`);
+        const json = await res.json();
+        if (!json.success) throw new Error(json.error);
+        renderPost(json.data);
+      } catch (err) {
+        container.innerHTML = `<p class="text-ink-soft">This item could not be found. <a href="index.html" class="text-teal font-medium">Return home</a>.</p>`;
+      }
+    }
+
+    function renderPost(p) {
+      document.getElementById('pageTitleTag').textContent = `${p.meta_title || p.title} · HPERD — Faisalabad Medical University`;
+      document.getElementById('pageDescTag').setAttribute('content', p.meta_description || '');
+
+      const cover = p.cover_image ? `<img src="${p.cover_image}" class="w-full h-72 lg:h-96 object-cover rounded-2xl mb-8 shadow-lift" alt="${esc(p.title)}">` : '';
+
+      let metaRow = '';
+      if (p.type === 'event') {
+        metaRow = `
+          <div class="flex flex-wrap gap-5 mt-4 text-sm text-ink-soft">
+            <span>📅 ${fmtDate(p.event_date)}${p.start_time ? ' · ' + p.start_time.slice(0,5) : ''}${p.end_time ? '–' + p.end_time.slice(0,5) : ''}</span>
+            ${p.venue ? `<span>📍 ${esc(p.venue)}</span>` : ''}
+            ${p.organizer ? `<span>🏛️ ${esc(p.organizer)}</span>` : ''}
+          </div>`;
+      } else {
+        metaRow = `<p class="text-sm text-teal font-medium mt-3">${fmtDate(p.created_at)}${p.author ? ' · ' + esc(p.author) : ''}</p>`;
+      }
+
+      const gallery = (p.gallery && p.gallery.length) ? `
+        <div class="mt-10">
+          <h3 class="font-display font-semibold text-navy mb-4">Gallery</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            ${p.gallery.map(g => `<img src="${g}" class="rounded-xl h-40 w-full object-cover">`).join('')}
+          </div>
+        </div>` : '';
+
+      const attachments = (p.attachments && p.attachments.length) ? `
+        <div class="mt-10">
+          <h3 class="font-display font-semibold text-navy mb-4">Downloads</h3>
+          <div class="space-y-2">
+            ${p.attachments.map(a => `
+              <a href="${a.file_path}" download class="flex items-center justify-between bg-mist rounded-xl px-4 py-3 text-sm hover:bg-navy/5 transition">
+                <span>${esc(a.file_name)}</span>
+                <span class="text-teal font-medium">Download</span>
+              </a>`).join('')}
+          </div>
+        </div>` : '';
+
+      const related = (p.related && p.related.length) ? `
+        <div class="mt-14 pt-10 border-t border-navy/10">
+          <h3 class="font-display font-semibold text-navy mb-5">Related</h3>
+          <div class="grid sm:grid-cols-3 gap-5">
+            ${p.related.map(r => `
+              <a href="post.html?slug=${encodeURIComponent(r.slug)}" class="card overflow-hidden block">
+                ${r.cover_image ? `<img src="${r.cover_image}" class="w-full h-28 object-cover">` : ''}
+                <div class="p-4"><p class="text-sm font-medium text-navy leading-snug">${esc(r.title)}</p></div>
+              </a>`).join('')}
+          </div>
+        </div>` : '';
+
+      document.getElementById('postContent').innerHTML = `
+        <p class="eyebrow text-sm capitalize">${p.type}${p.category ? ' · ' + esc(p.category) : ''}</p>
+        <h1 class="font-display text-3xl lg:text-4xl font-semibold text-navy mt-2">${esc(p.title)}</h1>
+        ${metaRow}
+        ${cover}
+        <div class="prose-content text-ink-soft leading-relaxed mt-8">${p.body_html || ''}</div>
+        ${attachments}
+        ${gallery}
+        ${related}
+      `;
+    }
+
+    loadPost();
+  </script>
+</body>
+</html>

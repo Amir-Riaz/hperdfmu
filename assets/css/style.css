@@ -264,3 +264,138 @@ textarea:focus-visible {
 /* Lazy image fade-in */
 img.lazy-fade { opacity: 0; transition: opacity 0.5s var(--ease-out); }
 img.lazy-fade.loaded { opacity: 1; }
+
+/* =========================================================
+   FMU HERO BACKGROUND
+   ========================================================= */
+
+.hero-fmu-bg {
+  filter: blur(3px);
+  transform: scale(1.04);
+  opacity: 0.78;
+  transition: filter 0.4s ease;
+}
+
+/* Extra visual softness at the bottom of the hero */
+.hero-fmu-bg::after {
+  content: "";
+}
+
+/* =========================================================
+   FEATURED INFORMATION SECTIONS
+   ========================================================= */
+
+.featured-info-section {
+  position: relative;
+}
+
+.featured-info-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(15, 45, 82, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 35px rgba(15, 45, 82, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.featured-info-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15, 118, 110, 0.22);
+  box-shadow: 0 18px 45px rgba(15, 45, 82, 0.12);
+}
+
+/* Main/featured card */
+.featured-info-card-primary {
+  border-top: 4px solid #D4A017;
+  box-shadow: 0 15px 45px rgba(15, 45, 82, 0.11);
+}
+
+/* Section heading accent */
+.section-heading-accent {
+  position: relative;
+  padding-left: 16px;
+}
+
+.section-heading-accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 999px;
+  background: #D4A017;
+}
+
+/* Announcement date badge */
+.announcement-date {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: rgba(15, 118, 110, 0.08);
+  color: #0F766E;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* Event date block */
+.event-date-block {
+  min-width: 86px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 14px;
+  background: #F2F4F6;
+  border: 1px solid rgba(15, 45, 82, 0.06);
+}
+
+.event-date-block .day {
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #0F2D52;
+}
+
+.event-date-block .month {
+  margin-top: 5px;
+  color: #0F766E;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Notice rows */
+.notice-highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.notice-highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #0F766E;
+}
+
+.notice-highlight:hover::before {
+  background: #D4A017;
+}
+
+@media (max-width: 640px) {
+  .hero-fmu-bg {
+    filter: blur(4px);
+    transform: scale(1.06);
+  }
+
+  .event-date-block {
+    min-width: 76px;
+  }
+}
