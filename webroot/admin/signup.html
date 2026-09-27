@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Admin Account · HPERD CMS</title>
+<link rel="icon" type="image/jpeg" href="../assets/images/hperd-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { navy:'#0F2D52', 'navy-deep':'#0A1F3A', teal:'#0F766E', gold:'#D4A017', mist:'#F2F4F6', paper:'#FBFAF8', ink:'#1A2733', 'ink-soft':'#4B5B68' },
+    fontFamily: { display:['Poppins','Inter','sans-serif'], body:['Inter','sans-serif'] }
+  }}}
+</script>
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="font-body bg-mist text-ink antialiased min-h-screen flex items-center justify-center p-5">
+
+  <div class="w-full max-w-sm">
+    <div class="text-center mb-8">
+      <img src="../assets/images/hperd-logo.jpg" alt="HPERD" class="w-16 h-16 mx-auto object-contain">
+      <h1 class="font-display font-semibold text-navy text-xl mt-4">Create Admin Account</h1>
+      <p class="text-ink-soft text-sm mt-1">Local/testing signup for the HPERD CMS</p>
+    </div>
+
+    <form id="signupForm" class="bg-white rounded-2xl shadow-lg border border-navy/5 p-7 space-y-4">
+      <div>
+        <label class="text-sm font-medium text-ink-soft">Display name</label>
+        <input type="text" id="displayName" autocomplete="name"
+          class="mt-1.5 w-full rounded-xl border border-navy/15 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/60"
+          placeholder="HPERD Admin">
+      </div>
+      <div>
+        <label class="text-sm font-medium text-ink-soft">Email</label>
+        <input type="email" id="email" required autocomplete="username"
+          class="mt-1.5 w-full rounded-xl border border-navy/15 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/60"
+          placeholder="you@fmu.edu.pk">
+      </div>
+      <div>
+        <label class="text-sm font-medium text-ink-soft">Password</label>
+        <input type="password" id="password" required minlength="8" autocomplete="new-password"
+          class="mt-1.5 w-full rounded-xl border border-navy/15 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/60"
+          placeholder="At least 8 characters">
+      </div>
+      <div>
+        <label class="text-sm font-medium text-ink-soft">Confirm password</label>
+        <input type="password" id="confirmPassword" required minlength="8" autocomplete="new-password"
+          class="mt-1.5 w-full rounded-xl border border-navy/15 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/60"
+          placeholder="••••••••">
+      </div>
+      <p id="signupError" class="text-sm text-red-600 hidden"></p>
+      <button type="submit" id="signupBtn"
+        class="w-full bg-navy text-white font-medium rounded-xl py-2.5 text-sm hover:bg-navy-deep transition">
+        Create Account
+      </button>
+    </form>
+
+    <p class="text-center text-xs text-ink-soft mt-6">
+      Already have an account? <a href="login.html" class="text-teal font-medium hover:underline">Sign in</a>
+    </p>
+  </div>
+
+  <script src="assets/js/api.js"></script>
+  <script>
+    const form = document.getElementById('signupForm');
+    const errorEl = document.getElementById('signupError');
+    const btn = document.getElementById('signupBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorEl.classList.add('hidden');
+
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      if (password !== confirmPassword) {
+        errorEl.textContent = 'Passwords do not match.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+      try {
+        await apiCall('/auth/signup.php', {
+          method: 'POST',
+          auth: false,
+          body: {
+            display_name: document.getElementById('displayName').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            password,
+            confirm_password: confirmPassword,
+          },
+        });
+        window.location.href = 'index.html';
+      } catch (err) {
+        errorEl.textContent = err.message || 'Could not create the account.';
+        errorEl.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Create Account';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+ <!-- ===== Universal Header (floating) ===== -->
+  <div class="header-slot">
+    <header id="siteHeader" class="site-header max-w-7xl mx-auto">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-[68px]">
+
+          <!-- Logo + Title -->
+          <a href="index.html" class="flex items-center gap-3 shrink-0">
+            <div class="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0">
+              <span class="beacon-glow"></span>
+              <img src="assets/images/hperd-logo.jpg" alt="HPERD crest — lighthouse since 2008" class="logo-mark logo-float w-full h-full object-contain">
+            </div>
+            <div class="leading-tight">
+              <p class="font-display font-semibold text-navy text-[15px] sm:text-base">HPERD</p>
+              <p class="text-[11px] text-ink-soft hidden sm:block">Faisalabad Medical University</p>
+            </div>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-7" aria-label="Primary">
+            <a href="index.html" class="nav-link text-sm">Home</a>
+            <a href="about.html" class="nav-link text-sm">About</a>
+            <a href="faculty.html" class="nav-link text-sm">Faculty</a>
+            <a href="programs.html" class="nav-link text-sm">Programs</a>
+            <a href="events.html" class="nav-link text-sm">Events</a>
+            <a href="announcements.html" class="nav-link text-sm">Announcements</a>
+            <a href="gallery.html" class="nav-link text-sm">Gallery</a>
+            <a href="downloads.html" class="nav-link text-sm">Downloads</a>
+            <a href="contact.html" class="nav-link text-sm">Contact</a>
+          </nav>
+
+          <!-- Right actions -->
+          <div class="flex items-center gap-2 sm:gap-3">
+            <button aria-label="Search HPERD site" class="hidden sm:flex w-9 h-9 rounded-full items-center justify-center text-ink-soft hover:text-navy hover:bg-mist transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <a href="#" class="hidden sm:inline-flex items-center rounded-full border border-navy/20 text-navy text-sm font-medium px-4 py-2 hover:bg-navy hover:text-white transition">
+              Login
+            </a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-navy hover:bg-mist transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <line x1="4" y1="7" x2="20" y2="7"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="17" x2="20" y2="17"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="fixed inset-0 bg-navy-deep/50 z-[60] opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+  <aside id="mobileDrawer" class="fixed top-0 right-0 h-full w-[78%] max-w-xs bg-white z-[70] translate-x-full transition-transform duration-300 ease-out lg:hidden shadow-2xl">
+    <div class="flex items-center justify-between px-5 h-20 border-b border-navy/10">
+      <span class="font-display font-semibold text-navy">Menu</span>
+      <button id="closeDrawer" aria-label="Close menu" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-mist">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="6" y1="18" x2="18" y2="6"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col px-5 py-4" aria-label="Mobile">
+      <a href="index.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Home</a>
+      <a href="about.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">About</a>
+      <a href="faculty.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Faculty</a>
+      <a href="programs.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Programs</a>
+      <a href="events.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Events</a>
+      <a href="announcements.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Announcements</a>
+      <a href="gallery.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Gallery</a>
+      <a href="downloads.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Downloads</a>
+      <a href="contact.html" class="drawer-link nav-link py-3 border-b border-navy/5 text-[15px]">Contact</a>
+      <a href="#" class="mt-4 inline-flex justify-center rounded-full bg-navy text-white text-sm font-medium px-4 py-2.5">Login</a>
+    </nav>
+  </aside>
+  <!-- ===== /Universal Header ===== -->
